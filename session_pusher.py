@@ -54,7 +54,10 @@ parser.add_argument("--url", "-u", type=str, required=True, help="URL to push al
 parser.add_argument("--cach", "-c", required=True, type=str, help="Path to cach (.json)")
 args = parser.parse_args()
 
-restore_session(driver, args.url, args.cach)
+if not args.url or not args.cach:
+    pass
+else:
+    restore_session(driver, args.url, args.cach)
 
 input("Session pushed, press Enter to exit...")
 driver.quit()
