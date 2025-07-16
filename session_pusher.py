@@ -5,15 +5,14 @@ import json
 from urllib.parse import urlparse
 import argparse
 
-options = webdriver.ChromeOptions()
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-gpu")
-options.add_argument("--disable-dev-shm-usage")
+def restore_session(session_file: str, target_url: str):
+    options = webdriver.ChromeOptions()
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--disable-dev-shm-usage")
 
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service, options=options)
-
-def restore_session(driver, session_file: str, target_url: str):
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=options)
     with open(session_file, encoding='utf-8') as f:
         session_data = json.load(f)
 
@@ -48,16 +47,13 @@ def restore_session(driver, session_file: str, target_url: str):
     """, session_data["sessionStorage"])
 
     driver.get(target_url)
+    input("Session pushed, press Enter to exit...")
+    driver.quit()
 
 parser = argparse.ArgumentParser(description="session pusher")
 parser.add_argument("--url", "-u", type=str, required=True, help="URL to push all cached data")
 parser.add_argument("--cach", "-c", required=True, type=str, help="Path to cach (.json)")
 args = parser.parse_args()
 
-if not args.url or not args.cach:
-    pass
-else:
-    restore_session(driver, args.url, args.cach)
-
-input("Session pushed, press Enter to exit...")
-driver.quit()
+if args.url and args.cach:
+    restore_session(args.url, args.cach)
