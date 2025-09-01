@@ -27,19 +27,17 @@ No Python installation required — compiled Windows binaries are included!
 └── README.md
 ```
 ## 🚀 Quick Start (Windows .exe)
-1. Add to PATH (optional, for easy access)
+1.Download the **latest** release **(CacheCopiatorUtility.zip)** and unzip it to any folder.  
+
+2. Add to PATH (optional, for easy access)  
 To run `cachr.exe` and `sesp.exe` from any terminal window, you can add the bin folder to your system PATH:
 
-🔧 How to do it (Windows):
-Press `Win + R`, type `sysdm.cpl`, press Enter.
-
-Go to Advanced → Environment Variables.
-
-Under System variables, find and select Path, then click Edit.
-
-Click `New` and paste the full path to the bin folder `(e.g., C:\Users\YourName\CacheCopiatorUtility\bin)`.
-
-Click OK to save.
+ - 🔧 How to do it (Windows):  
+1. Press `Win + R`, type `sysdm.cpl`, press Enter.  
+2. Go to Advanced → Environment Variables.  
+3. Under System variables, find and select Path, then click Edit.  
+4. Click `New` and paste the full path to the bin folder `(e.g., C:\Users\YourName\CacheCopiatorUtility\bin)`.  
+5. Click OK to save.  
 
 Now you can run the tools directly from cmd or PowerShell:
 
