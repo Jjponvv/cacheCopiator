@@ -21,9 +21,9 @@ No Python installation required — compiled Windows binaries are included!
 .
 ├── bin/                 # Precompiled Windows binaries
 │   ├── cachr.exe            # Session recorder
-│   └── session_pusher.exe   # Session restorer
+│   └── sesp.exe   # Session restorer
 ├── cachr.py             # Python source (optional)
-├── session_pusher.py    # Python source (optional)
+├── sesp.py    # Python source (optional)
 └── README.md
 ```
 ## 🚀 Quick Start (Windows .exe)
