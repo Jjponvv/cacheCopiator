@@ -14,6 +14,7 @@ def save(url: str, output_file: str):
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-extensions")
     options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("--incognito")
     options.binary_location = r"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 
 
@@ -45,7 +46,7 @@ def save(url: str, output_file: str):
 
 parser = argparse.ArgumentParser(description="Session recorder (CLI)")
 parser.add_argument("--url", type=str, required=True, help="URL for recording session")
-parser.add_argument("--out", type=str, help="output file")
+parser.add_argument("--out", type=str, help="output .json file")
 args = parser.parse_args()
 
 if not args.out:

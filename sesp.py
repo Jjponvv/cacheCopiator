@@ -10,6 +10,7 @@ def restore_session(session_file: str, target_url: str):
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--incognito")
 
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
@@ -30,7 +31,7 @@ def restore_session(session_file: str, target_url: str):
         try:
             driver.add_cookie(cookie)
         except Exception as e:
-            print(f"Помилка додавання cookie: {cookie.get('name')} - {e}")
+            print(f"Error while adding cookie: {cookie.get('name')} - {e}")
 
     driver.execute_script("""
         let data = arguments[0];
@@ -52,7 +53,7 @@ def restore_session(session_file: str, target_url: str):
 
 parser = argparse.ArgumentParser(description="session pusher")
 parser.add_argument("--url", "-u", type=str, required=True, help="URL to push all cached data")
-parser.add_argument("--cach", "-c", required=True, type=str, help="Path to cach (.json)")
+parser.add_argument("--cache", "-c", required=True, type=str, help="Path to cache .json")
 args = parser.parse_args()
 
 if args.url and args.cach:
