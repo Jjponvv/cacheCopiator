@@ -45,7 +45,7 @@ Now you can run the tools directly from cmd or PowerShell:
 
 ```
 cachr --url https://example.com --out session_example.json
-session_pusher --url https://example.com --cach session_example.json
+sesp --url https://example.com --cache session_example.json
 ```
 ## 🐍 Running with Python (Optional)
 Install requirements:
@@ -55,8 +55,8 @@ pip install selenium webdriver-manager
 Then:
 
 ```
-python cachr.py --url https://example.com 
-python session_pusher.py --url https://example.com --cach session_example.json
+python cachr.py --url https://example.com --out session_example.json
+python sesp.py --url https://example.com --cache session_example.json
 ```
 ## 📄 Output Format
 Each session is saved as a .json file like this:
@@ -70,6 +70,7 @@ Each session is saved as a .json file like this:
 ```
 ## 🔐 Security Note
 Session files may contain sensitive authentication tokens. Do not share them.
+Also in newest update I added incognito mode for pages that pop-up in process.
 
 ## 🤝 Contributing
 Pull requests and suggestions are welcome! Fork it and improve it.
