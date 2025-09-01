@@ -1,6 +1,6 @@
-# 💾 CashCopiator
+# 💾 CacheCopiator
 
-**CashCopiator** is a toolkit to **record and restore web sessions** using Chrome. It saves cookies, `localStorage`, and `sessionStorage` into a `.json` file and allows you to replay that session at any time.
+**CacheCopiator** is a toolkit to **record and restore web sessions** using Chrome. It saves cookies, `localStorage`, and `sessionStorage` into a `.json` file and allows you to replay that session at any time.
 
 No Python installation required — compiled Windows binaries are included!
 
@@ -28,7 +28,7 @@ No Python installation required — compiled Windows binaries are included!
 ```
 ## 🚀 Quick Start (Windows .exe)
 1. Add to PATH (optional, for easy access)
-To run `cachr.exe` and `session_pusher.exe` from any terminal window, you can add the bin folder to your system PATH:
+To run `cachr.exe` and `sesp.exe` from any terminal window, you can add the bin folder to your system PATH:
 
 🔧 How to do it (Windows):
 Press `Win + R`, type `sysdm.cpl`, press Enter.
@@ -37,7 +37,7 @@ Go to Advanced → Environment Variables.
 
 Under System variables, find and select Path, then click Edit.
 
-Click `New` and paste the full path to the bin folder `(e.g., C:\Users\YourName\cashCopiator\bin)`.
+Click `New` and paste the full path to the bin folder `(e.g., C:\Users\YourName\CacheCopiatorUtility\bin)`.
 
 Click OK to save.
 
