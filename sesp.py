@@ -56,5 +56,5 @@ parser.add_argument("--url", "-u", type=str, required=True, help="URL to push al
 parser.add_argument("--cache", "-c", required=True, type=str, help="Path to cache .json")
 args = parser.parse_args()
 
-if args.url and args.cach:
-    restore_session(args.cach, args.url)
+if args.url and args.cache:
+    restore_session(args.cache, args.url)
